@@ -43,7 +43,7 @@ a {
 /**/
 input {
   background-color: #e8f6ff;
-  color: #17212b;
+  color: #1da1f2;
   width: 100%;
 }
 
@@ -64,6 +64,10 @@ input {
   padding: 16px;
   color: #1da1f2;
   border: none;
+}
+
+input::placeholder {
+  color: #7bc6f5;
 }
 
 button {
