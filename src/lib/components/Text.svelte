@@ -7,15 +7,20 @@
 
     async function post() {
         // TASK 2: Post Messages
-        // const { data, error } = await supabase
+           const { error } = await supabase
+          .from('posts')
+          .insert({
+            username: user,
+            content: content
+          });
 
-        content = ""
-        await invalidateAll()
+        if (error) {
+          console.log(error.message);
+          return;
+        }
 
-        // if (error) {
-        //     console.log(error.message)
-        // }
-
+          content = "";
+         await invalidateAll();
         }
 
 

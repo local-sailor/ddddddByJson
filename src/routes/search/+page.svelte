@@ -9,57 +9,59 @@
     let posts: any = $state([]);
 
     async function search() {
-      posts = []
+      posts = [];
 
-      if (content == "" && user == "") // if there's nothing in the fields, do nothing
-      {
-        return
+      if (content == "" && user == "") {
+        return;
       }
 
-    if (user != "" && content != "") // user and content search
-    {
+      if (user != "" && content != "") {
         // TASK 5: Get Posts from a User AND contains XYZ
-        // const { data, error } = await supabase
+        const { data, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('username', user)
+          .ilike('content', `%${content}%`);
 
-        // if (error) {
-        //     console.log(error.message)
-        //     return
-        // }
-
-        // posts = data
-        return
+        if (error) {
+          console.log(error.message);
+          return;
     }
 
+posts = data;
+        return;
+      }
 
-      if (user != "") // user search
-      {
+      if (user != "") {
         // TASK 3: Get Posts from a User
-        // const { data, error } = await supabase
+        const { data, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('username', user);
 
-        // if (error) {
-        //   console.log(error.message)
-        // }
+        if (error) {
+          console.log(error.message);
+          return;
+        }
 
-        // posts = data
+        posts = data;
+        return;
+      }
 
-        return
-    }
-        
-      
+      if (content != "") {
+        // TASK 4: Get Posts containing XYZi
+        const { data, error } = await supabase
+      .from('posts')
+      .select('*')
+      .ilike('content', `%${content}%`);
 
-      if (content != "") // content contains search
-      {
+    if (error) {
+      console.log(error.message);
+      return;
+}
 
-        // TASK 4: Get Posts containing XYZ
-        // const { data, error } = await supabase
-
-        // if (error) {
-        //   console.log(error.message)
-        // }
-
-        // posts = data
-
-        return
+posts = data;
+        return;
       }
     }
 
