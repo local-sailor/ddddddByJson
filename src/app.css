@@ -21,6 +21,7 @@ a {
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
+  color: white;
   gap: 16px;
   background: #1da1f2;
   border: 1px solid #1f1f1f;
@@ -61,12 +62,13 @@ a .container:hover {
 input {
   background-color: #ffffff;
   padding: 16px;
-  color: #17212b;
+  color: #1da1f2;
   border: none;
 }
 
 button {
   background-color: #0d8edc;
+  color: white;
   border: white;
   padding: 12px;
   border-radius: 100px;
