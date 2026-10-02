@@ -48,7 +48,7 @@ input {
 
 .post-info {
   font-size: 0.8em;
-  color: 657786;
+  color: #d9f2ff;
 }
 .content {
   font-size: 2em;
@@ -61,7 +61,7 @@ a .container:hover {
 input {
   background-color: #ffffff;
   padding: 16px;
-  color: #14171a;
+  color: #17212b;
   border: none;
 }
 
