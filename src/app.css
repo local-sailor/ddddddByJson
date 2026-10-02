@@ -3,10 +3,10 @@
 }
 
 body {
-  background-color: #1DA1F2;
+  background-color: #C0DEED;
   margin: auto;
   padding: 0;
-  color: white;
+  color: #FFFFFF;
   font-family: Inter;
 }
 
@@ -22,7 +22,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: linear-gradient(180deg, #010102 0%, #010102 100%);
+  background: linear-gradient(180deg, #1D9BF0 0%, #1D9BF0 100%);
   border: 1px solid #1f1f1f;
   margin: -1px 0;
   transition: 50ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -57,7 +57,7 @@ a .container:hover {
 }
 
 input {
-  background-color: rgb(9, 9, 17);
+  background-color: rgb(29, 161, 242);
   padding: 16px;
   color: white;
   border: none;
