@@ -36,11 +36,11 @@ a {
   width: 100%;
 }
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
+/* .space-between { */
+/*   display: flex; */
+/*   justify-content: space-between; */
+/* } */
+/**/
 input {
   background-color: #e8f6ff;
   color: #17212b;
